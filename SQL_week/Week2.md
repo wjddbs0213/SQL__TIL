@@ -65,39 +65,28 @@ Row
 
 ### SQL 쿼리구조
 
- SELECT COL1 AS new_name, COL2, COL3
+ > **SELECT** Col1, Col2, Col3
+ >
+ > **FROM** Dataset.Table
+ >
+ > **WHERE** Col1 = 1
 
-   FROM Dataset.Table
 
-  WHERE Col1 = 1
-
-
-#### 1. FROM 
-*어떤 테이블에서 데이터를 확인할 것인가?*
-
+#### 1. FROM *어떤 테이블에서 데이터를 확인할 것인가?*
 : 앞선 예시로 치면, _FROM POKEMON_
 
-#### 2. WHERE
-*만약 원하는 조건이 있다면 어떤 조건인가?*
-
+#### 2. WHERE *만약 원하는 조건이 있다면 어떤 조건인가?*
 : 앞선 예시로 들면, _FROM name = '꼬부기'_
 
-#### 3. SELECT
-*테이블의 어떤 컬럼을 선택(출력)할 것인가?*
-
+#### 3. SELECT *테이블의 어떤 컬럼을 선택(출력)할 것인가?*
 : 'COL1 **AS** new_name'
 
   -> COL1의 이름을 new_name 으로 변경
 
+
 **예시**
 
-SELECT * *③ 모든 컬럼을 가져온다*
-
-  FROM basic. pokemon *① basic(데이터셋) pokemon(테이블) 에서*
-
- WHERE type1 = "Fire" *② type1이 Fire인 것의*
-
-
+- **SELECT** *    *③ 모든 컬럼을 가져온다*
 > **'SELECT*'**
 > - row 가 많으면, 비용이 많이 나감
 >   -> 행이 적으면 큰 문제 없음
@@ -106,12 +95,15 @@ SELECT * *③ 모든 컬럼을 가져온다*
 > - 제외할 컬럼 빼고, 모두 출력
 >   -> 컬럼의 수가 많을 때
 >   -> Join 할 때 유용
+- **FROM** basic. pokemon    *① basic(데이터셋) pokemon(테이블) 에서*
+- **WHERE** type1 = "Fire"    *② type1이 Fire인 것의*
+
 
 ### 데이터가 여러 장소에 저장되어 있는 경우
-IF) Table A, Table B...
+- IF) Table A, Table B...
+   : Table A, B에서 각각 추출 -> 겹치는 걸로 Join
 
-   -> Table A, B에서 각각 추출 -> 겹치는 걸로 Join
-
+### Pokemon 데이터로 해보기
 ![image](../image/11.png)
 
 ### 핵심 정리
