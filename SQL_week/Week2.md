@@ -84,17 +84,20 @@ Row
   -> COL1의 이름을 new_name 으로 변경
 
 
+
 **예시**
 
 - **SELECT** *    *③ 모든 컬럼을 가져온다*
-> **'SELECT*'**
-> - row 가 많으면, 비용이 많이 나감
->   -> 행이 적으면 큰 문제 없음
+> SELECT *
+>
+> row 가 많으면, 비용이 많이 나감
+>  -> 행이 적으면 큰 문제 없음
 
-> **'SELECT * EXCEPT(제외할 컬럼)'**
-> - 제외할 컬럼 빼고, 모두 출력
->   -> 컬럼의 수가 많을 때
->   -> Join 할 때 유용
+> SELECT * EXCEPT (제외할 컬럼)
+> 
+> 제외할 컬럼 빼고, 모두 출력
+>  -> 컬럼의 수가 많을 때
+>  -> Join 할 때 유용
 - **FROM** basic. pokemon    *① basic(데이터셋) pokemon(테이블) 에서*
 - **WHERE** type1 = "Fire"    *② type1이 Fire인 것의*
 
