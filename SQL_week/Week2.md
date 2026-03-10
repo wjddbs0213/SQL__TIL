@@ -65,7 +65,6 @@ Row
 
 ### SQL 쿼리구조
 
-작성예시
  SELECT COL1 AS new_name, COL2, COL3
 
    FROM Dataset.Table
