@@ -49,7 +49,9 @@
 
 ### 포켓몬스터로 보면?
 - 포켓몬 정보: 이름? 공격력? 타입?
+
   ex) 꼬부기 / 48(특수:50) / 물 
+    
   -> 정보를 기반으로 포켓몬을 선택할 수 있음
 
 | 이름 | 타입 | 공격력 | 특수 공격력 | 
@@ -65,41 +67,57 @@ Row
 
 작성예시
  SELECT COL1 AS new_name,
+
         COL2,
+
         COL3
+
    FROM Dataset.Table
+
   WHERE Col1 = 1
+
 
 #### 1. FROM 
 *어떤 테이블에서 데이터를 확인할 것인가?*
+
 : 앞선 예시로 치면, _FROM POKEMON_
 
 #### 2. WHERE
 *만약 원하는 조건이 있다면 어떤 조건인가?*
+
 : 앞선 예시로 들면, _FROM name = '꼬부기'_
 
 #### 3. SELECT
 *테이블의 어떤 컬럼을 선택(출력)할 것인가?*
+
 : 'COL1 **AS** new_name'
+
   -> COL1의 이름을 new_name 으로 변경
 
 **예시**
 
 SELECT * *③ 모든 컬럼을 가져온다*
+
   FROM basic. pokemon *① basic(데이터셋) pokemon(테이블) 에서*
+
  WHERE type1 = "Fire" *② type1이 Fire인 것의*
+
 
 > **'SELECT*'**
 > - row 가 많으면, 비용이 많이 나감
+
 >   -> 행이 적으면 큰 문제 없음
 
 > **'SELECT * EXCEPT(제외할 컬럼)'**
 > - 제외할 컬럼 빼고, 모두 출력
+
 >   -> 컬럼의 수가 많을 때
+
 >   -> Join 할 때 유용
 
 ### 데이터가 여러 장소에 저장되어 있는 경우
 IF) Table A, Table B...
+
    -> Table A, B에서 각각 추출 -> 겹치는 걸로 Join
 
 ## 2-5. 집계 (Group By / HAVING / SUM,COUNT)
