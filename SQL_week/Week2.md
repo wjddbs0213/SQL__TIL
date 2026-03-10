@@ -117,8 +117,28 @@ IF) Table A, Table B...
 
    -> Table A, B에서 각각 추출 -> 겹치는 걸로 Join
 
-## 2-5. 집계 (Group By / HAVING / SUM,COUNT)
+![image](../image/11.png)
 
+### 핵심 정리
+
+#### ① FROM 
+- 데이터를 확인할 Table 명시 -> Dataset.table
+- AS 활용: *FROM* Table1 *AS* t1(별칭)
+
+#### ② WHERE
+- FROM에 명시된 Table에 저장된 데이터 필터링 **조건설정**
+- Table에 있는 컬럼을 조건 설정
+
+#### ③ SELECT
+- Table에 저장되어있는 컬럼 선택
+- 여러 컬럼 선택 O
+- AS 활용: *SELECT* Col1 *AS* '별칭'
+
+
+
+
+## 2-5. 집계 (Group By / HAVING / SUM,COUNT)
+ 
 ~~~
 ✅ 학습 목표 :
 * 데이터를 집계하고 그룹화하는 방법을 설명할 수 있다.
