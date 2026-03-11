@@ -243,12 +243,12 @@ Row
 - GROUP BY로 묶은 후 -> 조건 설정
 
 > SELECT 컬럼 1, 컬럼 2, COUNT(컬럼 1) AS col_count
-
- FROM table
-
- GROUP BY 컬럼 1, 컬럼 2
- 
- **HAVING** col_count > 3
+>
+> FROM table
+>
+> GROUP BY 컬럼 1, 컬럼 2
+>
+> **HAVING** col_count > 3
 
 
 ### 서브쿼리
@@ -261,8 +261,8 @@ Row
 ### ORDER BY <컬럼> <순서>
 - 쿼리의 맨 아래에 위치
 - 순서
-  > DESC: 내림차순
-  > OSC: 오름차순 (Default)
+> DESC: 내림차순
+> OSC: 오름차순 (Default)
 
 ### LIMIT *쿼리문의 결과 ROW수를 제한*
 - LIMIT 100; 
