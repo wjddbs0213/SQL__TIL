@@ -149,7 +149,7 @@ Row
 
   -> 계산: 더하기, 빼기 / 최대 최소값 / 평균 / 갯수 세기
 
-### GROUP BY *같은 값끼리 모아서 그룹화한다*
+### GROUP BY: *같은 값끼리 모아서 그룹화한다*
 - 특정 컬럼을 기준으로 모으면서 다른 컬럼에선 집계 가능
 
   -> 합, 평균, MAX, MIN...
@@ -198,6 +198,7 @@ Row
 - 타입 당 포켓몬 수가 10마리 이상인 데이터만 추출한다면?
 
   -> 타입 당 포켓몬 수 집계 **후** -> HAVING
+
   -> 집계 **전** -> WHERE
 
 ### SQL로 표현한다면
@@ -242,9 +243,11 @@ Row
 - GROUP BY로 묶은 후 -> 조건 설정
 
 > SELECT 컬럼 1, 컬럼 2, COUNT(컬럼 1) AS col_count
-> FROM <table>
+> FROM table
 > GROUP BY 컬럼 1, 컬럼 2
 > **HAVING** col_count > 3
+
+
 
 ### 서브쿼리
 - SELECT 문 안에 존재하는 SELECT 쿼리
