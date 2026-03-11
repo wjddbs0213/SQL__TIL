@@ -124,6 +124,9 @@ Row
 - 여러 컬럼 선택 O
 - AS 활용: *SELECT* Col1 *AS* '별칭'
 
+### 연습문제
+![image](../image/12.png)
+
 
 
 
