@@ -243,10 +243,9 @@ Row
 - GROUP BY로 묶은 후 -> 조건 설정
 
 > SELECT 컬럼 1, 컬럼 2, COUNT(컬럼 1) AS col_count
-> FROM table
-> GROUP BY 컬럼 1, 컬럼 2
-> **HAVING** col_count > 3
-
+ FROM table
+ GROUP BY 컬럼 1, 컬럼 2
+ **HAVING** col_count > 3
 
 
 ### 서브쿼리
