@@ -122,13 +122,14 @@ https://www.youtube.com/watch?v=Il6L8OtNFpc&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 - 이 API를 인증된 사용자만 호출 허락하도록 구성
 
 
+
+
 ## 02.웹 스크래핑 사용하기
 
 - 도서관 정보나루 데이터에는 책의 쪽수 정보가 없음
 
   -> 따로 yes24 사이트에서 쪽수 정보를 가져와야함
 
-### 웹 크롤링
 
 ![image](../image/20.png)
 - HTML에 있는 내용을 가져와서, 원하는 정보는 뽑는 과정 = **웹 크롤링, 웹 스크랩핑**
@@ -146,13 +147,17 @@ https://www.youtube.com/watch?v=Il6L8OtNFpc&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 >  
 >        -> json, xml 패키지 = 각각 JSON, XML을 위한 파서
 
+
+
 **find() 메서드**
+
 ![image](../image/21.png)
 - soup 개체를 만듦 -> soup 개체의 find 메서드()에 입력한 내용
 
   : div 태그를 찾아주는데, id가 라는 infoset_specific속성을 가진 div 태그를 찾아줘
   
   -> 그럼 찾으려는 대상 **쪽수**가 있는 부분을 찾을 수 있음
+  
 
 **fing_all() 메서드**
  
