@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=Il6L8OtNFpc&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 # 1️⃣ 개념 정리 
 
-## 01. API 사용하기
+4## 01. API 사용하기
 
 **데이터를 가져올 때**
 - 데이터베이스에서 가져오기
