@@ -115,7 +115,7 @@ pd.Series([1,2,3,4,5]).quantile(0.9)
  diff = ns_book['대출건수'] - ns_book['대출건수'].mean()
  ns.sqrt(np.sum(diff**2) / (len(ns_book)-1)) 
 ~~~
-![alt text](image.png)
+![image](../image/image.png)
 
 ### 최빈값
 * 모든 값에 적용 ⭕️
@@ -130,18 +130,18 @@ pd.Series([1,2,3,4,5]).quantile(0.9)
 * 함수
   - matplotlib.pyplot
   - scatter
-![alt text](image-1.png)
+![image](../image/image-1.png)
 - 많이 겹쳐진 부분이 진한 것
 
 ### 히스토그램 -1
-![alt text](image-2.png)
+![image](../image/image-2.png)
  * 함수
    - hist
    - bins=5 -> 원본데이터가 얼마나 포함되어있는지 도수로 알 수 있음
 
 ### 히스토그램 -2
 
-![alt text](image-3.png)
+![image](../image/image-3.png)
 * random.seed()
   - 난수 생성기의 시작값(초기값)을 설정
   - 같은 seed를 주면 항상 같은 랜덤 결과가 나오게 만듦
