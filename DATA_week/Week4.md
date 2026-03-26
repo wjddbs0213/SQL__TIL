@@ -141,7 +141,7 @@ pd.Series([1,2,3,4,5]).quantile(0.9)
 
 ### 히스토그램 -2
 
-![image](../image/image-3.png)
+![image](../image/46.png)
 * random.seed()
   - 난수 생성기의 시작값(초기값)을 설정
   - 같은 seed를 주면 항상 같은 랜덤 결과가 나오게 만듦
@@ -154,7 +154,7 @@ pd.Series([1,2,3,4,5]).quantile(0.9)
 * boxplot(ns_book[['1번열','2번열']])
 
 - 2개이상의 열을 비교할 때 좋음
-![alt text](image-4.png)
+![image](../image/image-4.png)
 
 # 2️⃣ 수행 인증
 
