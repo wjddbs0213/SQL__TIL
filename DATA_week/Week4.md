@@ -38,18 +38,129 @@ https://www.youtube.com/watch?v=Cbk_tQtuhbM&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 ## 01. 통계로 요약하기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+### Describe()
+
+* 수치 데이터 타입 값 요약
+* count / mean / std / min, max / 25, 50, 75%
+  - 25, 50, 75 외 다른 위치에 있는 값을 알고 싶으면 => **percentiles**
+
+  > ns_book.describe(percentiles=[0.3, 0.6, 0.9])
+  > 
+  > -> 30%, 60%, 90% 위치의 값 추출
+
+* 문자열 타입의 값들 요약 => **include**
+- count / unique, top, freq
+
+  > ns_book.describe(include='object')
+  > 
+  > -> 보통 object 타입의 문자열 값 추출
+
+### 평균 
+
+~~~
+x = [10, 20, 30]        
+sum = 0
+for i in range(3):
+   sum += x[i]
+print ("평균:", sum / len(x))   # x 리스트의 길이로 합을 나눈 것
+
+ns_book['대출건수'].mean()      
+~~~
+
+### 중앙값
+
+~~~
+ns.book['대출건수'].median().    # 대출건수 나열시, 딱 가운데에 있는 값
+
+temp_df = pd.dataframe([1,2,3,4])  # 데이터 수가 짝수 -> 두 값의 평균
+temp_df.median()
+
+>> 2.5 
+~~~
+
+### 최소, 최댓값
+
+~~~ 
+ns.book['대출건수'].min()        # 최솟값
+ns.book['대출건수'].max()        # 최댓값
+~~~
+
+### 분위수
+
+~~~ 
+📌 50% (중앙값)
+ns.book['대출건수'].quantile(0.25)
+
+📌 25%, 50%, 75%
+ns.book['대출건수'].quantile([0.25, 0.5, 0.75])
+
+📌 quantile(0.9)
+pd.Series([1,2,3,4,5]).quantile(0.9)
+-> 1~5 에서 0.9의 위치에 있는 값
+-> 4가 75%, 5가 100%에 위치
+~~~
+
+### 분산, 표준편차
+
+* 분산: 데이터가 퍼져있는 정도
+  - 가운데 모여있음 = 분산 ⬇️
+  - 넓게 퍼져있음 = 분산 ⬆️
+  - **ns_book['대출건수'].var()**
+
+* 표준편차
+  - ns_book['대출건수'].std()
+  - numpy 는 좀 다름 
+~~~
+ import numpy as np
+ diff = ns_book['대출건수'] - ns_book['대출건수'].mean()
+ ns.sqrt(np.sum(diff**2) / (len(ns_book)-1)) 
+~~~
+![alt text](image.png)
+
+### 최빈값
+* 모든 값에 적용 ⭕️
+  - ns_book['도서명'].mode()
+  - ns_book['발행년도'].mode()
+
 
 ## 02. 분포 요약하기
 
-<!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+### 산점도
+- 주로 2차원
+* 함수
+  - matplotlib.pyplot
+  - scatter
+![alt text](image-1.png)
+- 많이 겹쳐진 부분이 진한 것
 
+### 히스토그램 -1
+![alt text](image-2.png)
+ * 함수
+   - hist
+   - bins=5 -> 원본데이터가 얼마나 포함되어있는지 도수로 알 수 있음
+
+### 히스토그램 -2
+
+![alt text](image-3.png)
+* random.seed()
+  - 난수 생성기의 시작값(초기값)을 설정
+  - 같은 seed를 주면 항상 같은 랜덤 결과가 나오게 만듦
+  
+* random.randn()
+* hist(random_samples)
+
+### 상자수염그림
+
+* boxplot(ns_book[['1번열','2번열']])
+
+- 2개이상의 열을 비교할 때 좋음
+![alt text](image-4.png)
 
 # 2️⃣ 수행 인증
 
-<!-- 교재에서 안내된 과정을 직접 실행해본 뒤, 진행 결과가 보이도록 3장 이상의 스크린샷을 캡처하여 아래에 첨부해주세요.-->
-
-
+![image](../image/43.png)
+![image](../image/44.png)
+![image](../image/45.png)
 
 <br>
 <br>
@@ -62,8 +173,7 @@ https://www.youtube.com/watch?v=Cbk_tQtuhbM&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 작업은 코랩에서 진행한 뒤, 코랩 링크를 아래에 첨부해주세요.**
 
 ```
-여기에 코랩 링크를 첨부해주세요!
-(제출 전, 코랩의 공유 설정을 ‘링크가 있는 모든 사용자가 보기 가능’으로 변경했는지 반드시 확인해주세요.)
+https://colab.research.google.com/drive/1nSubf_En0pEbS5HZE6HhkQZs9MW_pqUu?hl=ko#scrollTo=1cw-lDMRf2jy
 ```
 
 
